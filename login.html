@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login/login.css">
+    <title>Home-login</title>
+</head>
+<body>
+    <form>
+        <h3>Entrar em contato</h3>
+        <p>*Somente pessoas autorizadas podem acessar.</p>
+        <input id="email" type="text" name="email" placeholder="Seu e-mail...">
+        <input id="password" type="password" name="senha" placeholder="Sua senha...">
+        <input href="adm.html" type="submit" name="acao" value="Enviar" onclick="logar(); return false">
+        <input href="cadastro.html" type="submit" name="registro" value="Registrar">
+    </form>
+
+    <script>
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+
+        email.addEventListener('focus', ()=>{
+            email.style.borderColor = "#4A5F6A";
+        });
+
+        email.addEventListener('blur', ()=>{
+            email.style.borderColor = "#ccc";
+        });
+
+        password.addEventListener('focus', ()=>{
+            password.style.borderColor = "#4A5F6A";
+        });
+
+        password.addEventListener('blur', ()=>{
+            password.style.borderColor = "#ccc";
+        });
+
+        function logar(){
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if(email == "admin" && password == "admin"){
+                location.href = "adm.html";
+            }else{
+                alert('Usuario ou senha incorretos');
+            }
+        }
+    </script>
+</body>
+</html>

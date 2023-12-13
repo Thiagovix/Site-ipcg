@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Administrativo/adm.css"/>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img class="logo-1" src="image/LOGO IPCG.png" alt="logo igreja">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="#sobre">Noticias</a></li>
+        </ul>
+        <img class="logo-2" href="" src="image/icone sair branco.png" alt="Logar" onclick="confirmaSaida()">
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <main>
+        <section class="module parallax parallax-1">
+        <h1>Página Administrativa</h1> 
+        <p style="font-size: 25px; color: #fff; text-align: center">
+          Para acessar os eventos e noticias,<br> clique no menu em cima que será redirecionado para as respectivas telas
+        </p>  
+        </section>
+    </main>
+    </div>
+    <footer>
+      <div class="footer-bottom">
+        <p>copyright  &copy;2023. designed by <span>Thiago</span></p>
+      </div>
+    </footer>
+
+    <script src="mobile-navbar.js"></script>
+
+    <script>
+      function confirmaSaida() {
+        var option = confirm("Você realmente deseja sair?\nPara sair clique em OK");
+  
+      if(option) {
+      /* Redireciona para a página index */
+      window.location = 'index.html'
+    }
+}
+    </script>
+  </body>
+</html>
